@@ -26,6 +26,7 @@ class _CheckerboardBackgroundState extends State<CheckerboardBackground> {
       throw 'Could not launch $url';
     }
   }
+  bool lang=true;
 
   @override
   Widget build(BuildContext context) {
@@ -42,13 +43,13 @@ class _CheckerboardBackgroundState extends State<CheckerboardBackground> {
           SingleChildScrollView(
             child: Center(
               child: Container(
-                margin: EdgeInsets.all(20),
-                padding: EdgeInsets.all(20),
+                margin: EdgeInsets.all(30),
+                padding: EdgeInsets.all(30),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.white.withOpacity(0.8),
+                      color: Colors.white.withOpacity(1),
                       spreadRadius: 5,
                       blurRadius: 7,
                       offset: Offset(0, 3),)]),
@@ -59,42 +60,61 @@ class _CheckerboardBackgroundState extends State<CheckerboardBackground> {
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         border: Border.all(
-                          color: Colors.deepPurple,
+                          color: Colors.brown,
                           width: 2,
                         ),
                       ),
                       child: ClipOval(
+
                         child: Transform.translate(
                           offset: Offset(0,3),
                           child:
-                          Image.asset('image/qrhub.jpg',
+                          Image.asset('image/hub.jpg',
                             width: 100,
                             height: 100,
-                            fit:BoxFit.cover,),
+                            fit:BoxFit.cover
+                            ,),
                         ),
                       ),
                     ),
                     SizedBox(height: 20),
                     Divider(color: Color(0xFF7B2F2F),thickness: 2,),
                     SizedBox(height: 20),
-                    Text(
-                      "At QR Hub, we specialize in creating modern and interactive QR code solutions tailored for restaurants,cafés, and shops.Our main service is designing digital menus that are easy to access through a simple QR code scan.",                style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black,
-                    ),),
-                    SizedBox(height: 20),
-                    Text("Instead of printing traditional menus, your customers can instantly view a stylish and customized menu on their phones.This makes your business more professional, eco-friendly, and convenient while reducing printing costs.",                style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black,
-                    ),),
-                    SizedBox(height: 20),
-                    Text("We design QR codes and digital menus that match your brand identity whether for food menus, product catalogs, or service lists.With QR Hub, you can offer your customers a smooth, modern, and engaging experience.",
-                      style: TextStyle(
+                    Directionality(
+                      textDirection: lang?TextDirection.ltr:TextDirection.rtl,
+                      child: Text(
+                        lang?"At QR Hub, we specialize in creating modern and interactive QR code solutions tailored for restaurants,cafés, and shops.Our main service is designing digital menus that are easy to access through a simple QR code scan.":
+                        "في QR Hub، نحن متخصصون في إنشاء حلول حديثة وتفاعلية لرموز QR مصممة خصيصًا للمطاعم والمقاهي والمتاجر. خدمتنا الرئيسية هي تصميم قوائم رقمية يسهل الوصول إليها من خلال مسح رمز QR بسيط.",
+                        style: TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.bold,
                         color: Colors.black,
+                      ),),
+                    ),
+                    SizedBox(height: 20),
+                    Directionality(
+                      textDirection: lang?TextDirection.ltr:TextDirection.rtl,
+                      child: Text(lang?
+                      "Instead of printing traditional menus, your customers can instantly view a stylish and customized menu on their phones.This makes your business more professional, eco-friendly, and convenient while reducing printing costs.":
+                        "بدلاً من طباعة القوائم التقليدية، يمكن لعملائك عرض قائمة أنيقة ومخصصة على هواتفهم على الفور. وهذا يجعل عملك أكثر احترافية وصديقًا للبيئة ومريحًا مع تقليل تكاليف الطباعة.",
+                        style: TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                      ),),
+                    ),
+                    SizedBox(height: 20),
+                    Directionality(
+                      textDirection: lang?TextDirection.ltr:TextDirection.rtl,
+
+                      child: Text(
+                        lang?"We design QR codes and digital menus that match your brand identity whether for food menus, product catalogs, or service lists.With QR Hub, you can offer your customers a smooth, modern, and engaging experience.":
+                        " نصمم رموز QR وقوائم رقمية تتناسب مع هوية علامتك التجارية سواء كانت قوائم طعام أو كتالوجات منتجات أو قوائم خدمات. مع QR Hub، يمكنك أن تقدم لعملائك تجربة سلسة وحديثة وجذابة.",
+                        style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black,
+                        ),
                       ),
                     ),
                     SizedBox(height: 20),
@@ -104,6 +124,26 @@ class _CheckerboardBackgroundState extends State<CheckerboardBackground> {
 
                   ],
                 ),
+              ),
+            ),
+          ),
+          Positioned(
+            top: 40,
+            right: 20,
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Color(0xFF7B2F2F),
+                shape: CircleBorder(),
+                minimumSize: Size(50, 50),
+              ),
+              onPressed: () {
+                setState(() {
+                  lang = !lang;
+                });
+              },
+              child: Text(
+                lang ? 'en':'ar'  ,
+                style: TextStyle(fontSize: 20, color: Colors.white),
               ),
             ),
           ),
