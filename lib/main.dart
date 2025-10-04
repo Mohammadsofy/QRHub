@@ -7,6 +7,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 void main() {
   runApp(CheckerboardBackground());
+
 }
 
 class CheckerboardBackground extends StatefulWidget {
@@ -29,6 +30,10 @@ class _CheckerboardBackgroundState extends State<CheckerboardBackground> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
       title: 'QR Hub',
       home: Scaffold(
         body: Stack(
@@ -43,8 +48,8 @@ class _CheckerboardBackgroundState extends State<CheckerboardBackground> {
             SingleChildScrollView(
               child: Center(
                 child: Container(
-                  margin: EdgeInsets.all(30),
-                  padding: EdgeInsets.all(30),
+                  margin: EdgeInsets.all(7),
+                  padding: EdgeInsets.all(9),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
                       boxShadow: [
@@ -84,9 +89,9 @@ class _CheckerboardBackgroundState extends State<CheckerboardBackground> {
                         textDirection: lang?TextDirection.ltr:TextDirection.rtl,
                         child: Text(
                           lang?"At QR Hub, we specialize in creating modern and interactive QR code solutions tailored for restaurants,cafés, and shops.Our main service is designing digital menus that are easy to access through a simple QR code scan.":
-                          "في QR Hub، نحن متخصصون في إنشاء حلول حديثة وتفاعلية لرموز QR مصممة خصيصًا للمطاعم والمقاهي والمتاجر. خدمتنا الرئيسية هي تصميم قوائم رقمية يسهل الوصول إليها من خلال مسح رمز QR بسيط.",
+                          " مجموعة مختصة في إنشاء حلول حديثة وتفاعلية لرموز QR مصممة للمطاعم والمقاهي والمتاجر. خدمتنا الرئيسية هي تصميم قوائم رقمية سهل الوصول إليها من خلال مسح رمز QR بسيط.",
                           style: TextStyle(
-                            fontSize: 24,
+                            fontSize: 20,
                             fontWeight: FontWeight.bold,
                             color: Colors.black,
                           ),),
@@ -98,7 +103,7 @@ class _CheckerboardBackgroundState extends State<CheckerboardBackground> {
                         "Instead of printing traditional menus, your customers can instantly view a stylish and customized menu on their phones.This makes your business more professional, eco-friendly, and convenient while reducing printing costs.":
                         "بدلاً من طباعة القوائم التقليدية، يمكن لعملائك عرض قائمة أنيقة ومخصصة على هواتفهم على الفور. وهذا يجعل عملك أكثر احترافية وصديقًا للبيئة ومريحًا مع تقليل تكاليف الطباعة.",
                           style: TextStyle(
-                            fontSize: 24,
+                            fontSize: 20,
                             fontWeight: FontWeight.bold,
                             color: Colors.black,
                           ),),
@@ -109,15 +114,89 @@ class _CheckerboardBackgroundState extends State<CheckerboardBackground> {
 
                         child: Text(
                           lang?"We design QR codes and digital menus that match your brand identity whether for food menus, product catalogs, or service lists.With QR Hub, you can offer your customers a smooth, modern, and engaging experience.":
-                          " نصمم رموز QR وقوائم رقمية تتناسب مع هوية علامتك التجارية سواء كانت قوائم طعام أو كتالوجات منتجات أو قوائم خدمات. مع QR Hub، يمكنك أن تقدم لعملائك تجربة سلسة وحديثة وجذابة.",
+                          " تصمم رموز QR وقوائم رقمية تتناسب مع هوية علامتك التجارية سواء كانت قوائم طعام أو كتالوجات منتجات أو قوائم خدمات. مع QR Hub، يمكنك أن تقدم لعملائك تجربة سلسة وحديثة وجذابة.",
                           style: TextStyle(
-                            fontSize: 24,
+                            fontSize: 20,
                             fontWeight: FontWeight.bold,
                             color: Colors.black,
                           ),
                         ),
                       ),
                       SizedBox(height: 20),
+                      Directionality(
+                        textDirection: lang?TextDirection.rtl:TextDirection.ltr,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            Text("🎉🎉🎉",style: TextStyle(fontSize: 30)),
+                            Container(
+                              padding: EdgeInsets.all(16),
+                              decoration: BoxDecoration(
+                                color: Color(0xFF7B2F2F),
+                                borderRadius: BorderRadius.circular(20),
+                                border: Border.all(
+                                  color: Color(0xFF7B2F2F),
+                                  width: 3,
+                                ),
+                              ),
+                              child:Text(lang?"Offers" :"عروضنا",
+                                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white,),),
+                            ),
+                        
+                          ],
+                        ),
+                      ),
+                      SizedBox(height: 20),
+                      Directionality(
+                        textDirection: lang ? TextDirection.rtl : TextDirection.ltr,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                          Image.asset(
+                          'image/Picture1.png',
+                          width: 200,
+                          height: 200,),
+                            Flexible(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.end,
+                                children: [
+                                  Directionality(
+                                    textDirection: lang ? TextDirection.ltr : TextDirection.rtl,
+                                    child: Text(
+                                      lang
+                                          ? "A digital Menu with 10 printed items ready for the table for only 100 JD"
+                                          : "قائمة رقمية (مينيو) مع 10 قطع مطبوعة وجاهزة للطاولات فقط ب 100 دينار",
+                                      style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                                    ),
+                                  ),
+                                  SizedBox(height: 10),
+                                  Directionality(
+                                    textDirection: lang ? TextDirection.ltr : TextDirection.rtl,
+                                    child: Text(
+                                      lang
+                                          ? "• Additional items: 2 JD per item."
+                                          : "•  لزيادة قطع ,كل قطعة بدينارين",
+                                      style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                                    ),
+                                  ),
+                                  SizedBox(height: 10),
+                                  Directionality(
+                                    textDirection: lang ? TextDirection.ltr : TextDirection.rtl,
+                                    child: Text(
+                                      lang
+                                          ? "• Optional: 15 JD monthly subscription for website updates, or 5 JD per update without a subscription."
+                                          : "•  اختياري , اشتراك شهري للتحديثات على الموقع ب 15 دينار او دون اشتراك على كل تحديث 5 دنانير",
+                                      style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+
+
                       Divider(color: Color(0xFF7B2F2F),thickness: 2,),
                       SizedBox(height: 20),
                       IconButton(onPressed: _instagram, icon:
@@ -179,72 +258,4 @@ class CheckerboardPainter extends CustomPainter {
 
   @override
   bool shouldRepaint(covariant CustomPainter oldDelegate) => false;
-}
-
-
-
-
-class WaveText extends StatefulWidget {
-  const WaveText({super.key});
-
-  @override
-  State<WaveText> createState() => _WaveTextState();
-}
-
-class _WaveTextState extends State<WaveText>
-    with SingleTickerProviderStateMixin {
-  late AnimationController _controller;
-
-  final String text = "qrhup";
-
-  @override
-  void initState() {
-    super.initState();
-    _controller =
-    AnimationController(vsync: this, duration: const Duration(seconds: 3))
-      ..repeat(reverse: true); // يكرر الحركة
-  }
-
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: List.generate(text.length, (index) {
-            return AnimatedBuilder(
-              animation: _controller,
-              builder: (context, child) {
-                // نعمل تأخير لكل حرف
-                double delay = index * 0.2;
-                double value =
-                    (sin((_controller.value * 2 * 3.14) + delay) + 1) / 2;
-
-                return Opacity(
-                  opacity: value,
-                  child: Transform.translate(
-                    offset: Offset(0, -10 * value), // حركة لفوق وتحت
-                    child: Text(
-                      text[index],
-                      style: const TextStyle(
-                        fontSize: 40,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.blue,
-                      ),
-                    ),
-                  ),
-                );
-              },
-            );
-          }),
-        ),
-      ),
-    );
-  }
 }
