@@ -207,8 +207,8 @@ class _CheckerboardBackgroundState extends State<CheckerboardBackground> {
               ),
             ),
             Positioned(
-              top: 40,
-              right: 20,
+              top: 15,
+              right: 7,
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Color(0xFF7B2F2F),
@@ -221,7 +221,7 @@ class _CheckerboardBackgroundState extends State<CheckerboardBackground> {
                   });
                 },
                 child: Text(
-                  lang ? 'en':'ar'  ,
+                  lang ? 'AR':'EN'  ,
                   style: TextStyle(fontSize: 20, color: Colors.white),
                 ),
               ),

@@ -57696,8 +57696,8 @@ a=b?B.K:B.Q
 b=b?"\u2022 Website Updates: 15 JD/month subscription for unlimited updates, or 5 JD per single update without a subscription":"\u2022  \u062a\u062d\u062f\u064a\u062b \u0627\u0644\u0645\u0648\u0642\u0639: 15 \u062f\u064a\u0646\u0627\u0631 \u0634\u0647\u0631\u064a\u064b\u0627 \u0644\u0627\u0634\u062a\u0631\u0627\u0643 \u062a\u062d\u062f\u064a\u062b\u0627\u062a \u063a\u064a\u0631 \u0645\u062d\u062f\u0648\u062f\u0629\u060c \u0623\u0648 5 \u062f\u0646\u0627\u0646\u064a\u0631 \u0644\u0644\u062a\u062d\u062f\u064a\u062b \u0627\u0644\u0648\u0627\u062d\u062f \u0628\u062f\u0648\u0646 \u0627\u0634\u062a\u0631\u0627\u0643"
 a6=A.a4I(A.yt(A.a85(A.c([a7,a8,s,r,p,q,n,o,l,m,k,i,A.iM(A.aak(A.c([new A.zp(A.a85(A.c([g,e,j,c,d,A.iM(A.ly(b,A.ee(a1,a1,a1,a1,a1,a1,a1,a1,a1,a1,a1,20,a1,a1,B.aH,a1,a1,!0,a1,a1,a1,a1,a1,a1,a1,a1)),a)],f),B.bE),a1)],f),B.fH,B.dV),h),A.a8l(A.an(a2),2),A.h6(a1,20,a1),A.ai7(a1,a1,A.ai6(B.yw,B.Cs,a1,30),a1,a0.gSB(),a1)],f),B.bF),new A.eq(a1,a1,a1,a5,a6,a1,B.b8),a1,new A.bd(7,7,7,7),new A.bd(9,9,9,9),a1),a1,a1)
 a5=A.ahs(a1,a1,A.an(a2),a1,a1,a1,a1,a1,a1,a1,a1,new A.P(50,50),a1,a1,new A.cw(0,B.q),a1,a1,a1,a1)
-a7=a0.e?"en":"ar"
-return new A.r0(new A.t3(A.Xl(B.eA,A.c([a4,new A.Cu(a6,a1),A.a5I(a1,new A.z9(new A.a_4(a0),a1,a1,a1,a5,a1,a1,!1,a1,a1,A.ly(a7,A.ee(a1,a1,B.j,a1,a1,a1,a1,a1,a1,a1,a1,20,a1,a1,a1,a1,a1,!0,a1,a1,a1,a1,a1,a1,a1,a1)),a1),a1,a1,a1,20,40,a1)],f),B.hn),a1),"QR Hub",a3,!1,a1)}}
+a7=a0.e?"AR":"EN"
+return new A.r0(new A.t3(A.Xl(B.eA,A.c([a4,new A.Cu(a6,a1),A.a5I(a1,new A.z9(new A.a_4(a0),a1,a1,a1,a5,a1,a1,!1,a1,a1,A.ly(a7,A.ee(a1,a1,B.j,a1,a1,a1,a1,a1,a1,a1,a1,20,a1,a1,a1,a1,a1,!0,a1,a1,a1,a1,a1,a1,a1,a1)),a1),a1,a1,a1,7,15,a1)],f),B.hn),a1),"QR Hub",a3,!1,a1)}}
 A.a_4.prototype={
 $0(){var s=this.a
 s.aE(new A.a_3(s))},
