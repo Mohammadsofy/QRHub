@@ -128,7 +128,6 @@ class _CheckerboardBackgroundState extends State<CheckerboardBackground> {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
-                            Text("🎉🎉🎉",style: TextStyle(fontSize: 30)),
                             Container(
                               padding: EdgeInsets.all(16),
                               decoration: BoxDecoration(
@@ -139,7 +138,7 @@ class _CheckerboardBackgroundState extends State<CheckerboardBackground> {
                                   width: 3,
                                 ),
                               ),
-                              child:Text(lang?"Offers" :"عروضنا",
+                              child:Text(lang?"🎉 Special Offer 🎉" :"🎉 عرض خاص 🎉",
                                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white,),),
                             ),
                         
@@ -152,20 +151,19 @@ class _CheckerboardBackgroundState extends State<CheckerboardBackground> {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
-                          Image.asset(
-                          'image/Picture1.png',
-                          width: 200,
-                          height: 200,),
                             Flexible(
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.end,
                                 children: [
+                                  Image.asset(
+                                    'image/Picture1.png',
+                                  height:300),
                                   Directionality(
                                     textDirection: lang ? TextDirection.ltr : TextDirection.rtl,
                                     child: Text(
                                       lang
-                                          ? "A digital Menu with 10 printed items ready for the table for only 100 JD"
-                                          : "قائمة رقمية (مينيو) مع 10 قطع مطبوعة وجاهزة للطاولات فقط ب 100 دينار",
+                                          ? "Digital Menu Package: 10 printed QR table displays for only 100 JD"
+                                          : "بـ 100 دينار فقط: قائمة رقمية مع 10 بطاقات QR جاهزة للطاولات",
                                       style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                                     ),
                                   ),
@@ -174,8 +172,8 @@ class _CheckerboardBackgroundState extends State<CheckerboardBackground> {
                                     textDirection: lang ? TextDirection.ltr : TextDirection.rtl,
                                     child: Text(
                                       lang
-                                          ? "• Additional items: 2 JD per item."
-                                          : "•  لزيادة قطع ,كل قطعة بدينارين",
+                                          ? "• Extra Items: just 2 JD per additional item"
+                                          : "•  لعناصر الإضافية: 2 دينار لكل عنصر إضافي",
                                       style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                                     ),
                                   ),
@@ -184,8 +182,8 @@ class _CheckerboardBackgroundState extends State<CheckerboardBackground> {
                                     textDirection: lang ? TextDirection.ltr : TextDirection.rtl,
                                     child: Text(
                                       lang
-                                          ? "• Optional: 15 JD monthly subscription for website updates, or 5 JD per update without a subscription."
-                                          : "•  اختياري , اشتراك شهري للتحديثات على الموقع ب 15 دينار او دون اشتراك على كل تحديث 5 دنانير",
+                                          ? "• Website Updates: 15 JD/month subscription for unlimited updates, or 5 JD per single update without a subscription"
+                                          : "•  تحديث الموقع: 15 دينار شهريًا لاشتراك تحديثات غير محدودة، أو 5 دنانير للتحديث الواحد بدون اشتراك",
                                       style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                                     ),
                                   ),
